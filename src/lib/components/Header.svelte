@@ -2,7 +2,7 @@
 	import 'iconify-icon';
 </script>
 
-<header class="sticky w-full border-b border-neutral-200 dark:bg-neutral-800">
+<header class="sticky w-full border-b border-b-blue-800">
 	<div class="mx-auto flex items-center justify-between">
 		<div class="flex items-center border-r p-3">
 			<a href="/">
@@ -17,8 +17,6 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-		<div class="flex items-center border-l p-3">
-			<iconify-icon icon="lucide:info" height="24" width="24"></iconify-icon>
-		</div>
+		<div class="flex items-center border-l p-3"></div>
 	</div>
 </header>

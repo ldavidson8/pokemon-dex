@@ -1,0 +1,22 @@
+{
+	"extends": ["stylelint-config-standard", "stylelint-config-recommended"],
+	"plugins": ["stylelint-prettier", "stylelint-gamut"],
+	"overrides": [
+		{
+			"files": ["*.svelte"],
+			"extends": "stylelint-config-html/svelte"
+		}
+	],
+	"rules": {
+		"at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
+			}
+		],
+		"gamut/color-no-out-gamut-range": true,
+		"function-disallowed-list": ["rgb", "hsl"],
+		"color-function-notation": "modern",
+		"hue-degree-notation": "number"
+	}
+}

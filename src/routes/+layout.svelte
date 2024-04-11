@@ -1,7 +1,8 @@
 <script lang="ts">
-	import '../app.css';
-	import '@fontsource/press-start-2p';
 	import '@fontsource-variable/figtree';
+	import '../app.css';
+
+	import Header from '$lib/components/Header.svelte';
 
 	import { browser } from '$app/environment';
 	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
@@ -21,5 +22,6 @@
 </svelte:head>
 
 <QueryClientProvider client={queryClient}>
+	<Header />
 	<slot />
 </QueryClientProvider>

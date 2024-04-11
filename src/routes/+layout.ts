@@ -1,5 +1,6 @@
-import { browser } from '$app/environment';
 import { QueryClient } from '@tanstack/svelte-query';
+
+import { browser } from '$app/environment';
 
 export async function load() {
 	const queryClient = new QueryClient({
