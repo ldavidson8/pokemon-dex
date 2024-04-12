@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
+	import Bug from '$lib/icons/bug.svg?component';
 </script>
 
 <Container>
-	<div class="mt-4 h-48 w-48 bg-blue-700 text-center">Hello world</div>
-	<div class="mt-4 h-48 w-48 text-center" style="background-color: #0071f5;">Hello world</div>
+	<h1>Welcome to SvelteKit</h1>
+	<Bug class="text-gray-1000" />
 </Container>

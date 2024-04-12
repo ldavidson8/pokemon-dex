@@ -4,8 +4,8 @@
 
 	import Header from '$lib/components/Header.svelte';
 
-	import { browser } from '$app/environment';
-	import Screen from '$lib/components/utils/screen.svelte';
+	import { browser, dev } from '$app/environment';
+	import Screen from '$lib/components/utils/Screen.svelte';
 	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 
 	const queryClient = new QueryClient({
@@ -25,5 +25,7 @@
 <QueryClientProvider client={queryClient}>
 	<Header />
 	<slot />
-	<Screen />
+	{#if dev}
+		<Screen />
+	{/if}
 </QueryClientProvider>
