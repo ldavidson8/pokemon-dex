@@ -110,6 +110,18 @@ export default {
 			background: {
 				100: 'var(--background-100)',
 				200: 'var(--background-200)'
+			},
+			'gray-alpha': {
+				'100': 'hsl(var(--gray-alpha-100) / <alpha-value>)',
+				'200': 'hsl(var(--gray-alpha-200) / <alpha-value>)',
+				'300': 'hsl(var(--gray-alpha-300) / <alpha-value>)',
+				'400': 'hsl(var(--gray-alpha-400) / <alpha-value>)',
+				'500': 'hsl(var(--gray-alpha-500) / <alpha-value>)',
+				'600': 'hsl(var(--gray-alpha-600) / <alpha-value>)',
+				'700': 'hsl(var(--gray-alpha-700) / <alpha-value>)',
+				'800': 'hsl(var(--gray-alpha-800) / <alpha-value>)',
+				'900': 'hsl(var(--gray-alpha-900) / <alpha-value>)',
+				'1000': 'hsl(var(--gray-alpha-1000) / <alpha-value>)'
 			}
 		},
 		plugins: ['postcss-color-scheme/tailwind', 'tailwindcss-forms']

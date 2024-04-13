@@ -1,11 +1,10 @@
 <script lang="ts">
 	import '@fontsource-variable/figtree';
 	import '../app.css';
-
 	import Header from '$lib/components/Header.svelte';
+	import ScreenSize from '$lib/components/utils/ScreenSize.svelte';
 
 	import { browser, dev } from '$app/environment';
-	import Screen from '$lib/components/utils/Screen.svelte';
 	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 
 	const queryClient = new QueryClient({
@@ -26,6 +25,6 @@
 	<Header />
 	<slot />
 	{#if dev}
-		<Screen />
+		<ScreenSize />
 	{/if}
 </QueryClientProvider>

@@ -9,6 +9,10 @@
 }
 
 @layer base {
+	body {
+		@apply h-dvh bg-background-100 text-gray-1000 antialiased transition-colors duration-200;
+	}
+
 	:root,
 	.light,
 	[data-theme='light'] {
@@ -355,9 +359,5 @@
 				--pink-1000-value: oklch(95.74% 0.0326 350.08);
 			}
 		}
-	}
-
-	body {
-		@apply bg-background-100 text-gray-1000 transition-colors duration-200;
 	}
 }
