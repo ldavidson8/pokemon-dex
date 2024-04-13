@@ -20,6 +20,9 @@ export default defineConfig({
 			}
 		})
 	],
+	build: {
+		cssMinify: 'lightningcss'
+	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}
