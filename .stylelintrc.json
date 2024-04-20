@@ -14,6 +14,7 @@
 				"ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
 			}
 		],
+		"alpha-value-notation": "number",
 		"gamut/color-no-out-gamut-range": true,
 		"function-disallowed-list": ["rgb", "hsl"],
 		"color-function-notation": "modern",
