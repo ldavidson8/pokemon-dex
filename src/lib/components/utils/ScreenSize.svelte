@@ -20,7 +20,7 @@
 </script>
 
 <div
-	class="fixed bottom-5 left-5 z-50 flex items-center space-x-2 rounded-full bg-gray-1000 px-2.5 py-1 font-mono text-xs font-medium text-background-100"
+	class="fixed bottom-5 left-5 z-50 flex items-center space-x-2 rounded-full bg-gray-1000 px-2.5 py-1 font-mono text-xs font-medium text-gray-100"
 >
 	<span>
 		{width.toLocaleString()} x {height.toLocaleString()}

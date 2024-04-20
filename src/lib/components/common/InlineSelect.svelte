@@ -15,7 +15,7 @@
 
 <div class="flex flex-col gap-2">
 	<p>{label}</p>
-	<ul class="relative isolate flex items-center rounded-md bg-background-200">
+	<ul class="relative isolate flex items-center rounded-md bg-background-100">
 		{#each options as option}
 			<li class="w-full">
 				<button
@@ -45,12 +45,20 @@
 		position: absolute;
 		border-radius: 0.375rem;
 		isolation: isolate;
-		background-color: hsl(var(--gray-200-value));
-		box-shadow: 0 1px 2px var(--gray-alpha-100);
+		background-image: linear-gradient(to right, var(--gray-400-value), var(--gray-300-value));
 		z-index: -1;
 		height: calc(100% - 0.5rem);
 		pointer-events: none;
 		transition: left 0.3s ease-in-out;
 		translate: 0.25rem 0;
+		&:before {
+			content: '';
+			z-index: -1;
+			position: absolute;
+			inset: 1px;
+			background-image: linear-gradient(var(--gray-200-value), var(--gray-100-value));
+			border-radius: calc(0.5rem - 1px);
+			pointer-events: none;
+		}
 	}
 </style>
