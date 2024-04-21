@@ -1,9 +1,12 @@
 <script lang="ts">
+	import { browser, dev } from '$app/environment';
+	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
+	import { SvelteQueryDevtools } from '@tanstack/svelte-query-devtools';
+
 	import '@fontsource-variable/figtree';
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	import ScreenSize from '$lib/components/utils/ScreenSize.svelte';
-	import { browser, dev } from '$app/environment';
 
 	import '../styles/nprogress.css';
 	import NProgress from 'nprogress';
@@ -18,8 +21,6 @@
 			NProgress.start();
 		} else NProgress.done();
 	}
-
-	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 
 	const queryClient = new QueryClient({
 		defaultOptions: {
@@ -41,4 +42,5 @@
 	{#if dev}
 		<ScreenSize />
 	{/if}
+	<SvelteQueryDevtools />
 </QueryClientProvider>

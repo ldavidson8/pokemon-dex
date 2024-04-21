@@ -56,6 +56,7 @@
 	"dependencies": {
 		"@fontsource-variable/figtree": "^5.0.20",
 		"@tanstack/svelte-query": "^5.28.9",
+		"@tanstack/svelte-query-devtools": "^5.29.0",
 		"bits-ui": "^0.21.2",
 		"clsx": "^2.1.0",
 		"iconify-icon": "^2.0.0",

@@ -4,7 +4,7 @@
 	import { flyAndScale } from '$lib/utils/transitions';
 </script>
 
-<Dialog.Root open>
+<Dialog.Root>
 	<Dialog.Trigger class="inline-flex h-6 items-center justify-center">
 		<slot name="trigger" />
 	</Dialog.Trigger>
