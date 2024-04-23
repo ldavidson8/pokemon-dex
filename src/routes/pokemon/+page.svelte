@@ -1,18 +1,19 @@
 <script lang="ts">
 	import { createInfiniteQuery } from '@tanstack/svelte-query';
-	import { getPokemonList } from '$lib/api/getPokemonList.query';
 	import Button from '$lib/components/common/Button.svelte';
+	import { POKEMON_LIMIT } from '$lib/constants';
+	import { getPokemonWithTypes } from '$lib/api/getPokemonWithTypes.query';
 
 	export const usePokemonList = createInfiniteQuery({
 		queryKey: ['pokemonList'],
-		queryFn: ({ pageParam }) => getPokemonList({ pageParam }),
-		initialPageParam: 1,
+		queryFn: ({ pageParam = 0 }) => getPokemonWithTypes({ page: pageParam }),
+		initialPageParam: 0,
 		getNextPageParam: (lastPage) => {
 			if (lastPage.next) {
 				const nextUrl = new URL(lastPage.next);
 				const offset: string | null = nextUrl.searchParams.get('offset');
 				if (offset) {
-					return Math.ceil(parseInt(offset) / 50) + 1;
+					return parseInt(offset) / POKEMON_LIMIT;
 				}
 			}
 			return undefined;
@@ -32,6 +33,9 @@
 			{#each page.results as pokemon}
 				<a href="/pokemon/{pokemon.name}" class="capitalize">
 					<p>{pokemon.name}</p>
+					{#each pokemon.types as type}
+						<p>{type.type.name}</p>
+					{/each}
 				</a>
 			{/each}
 		{/each}
