@@ -10,7 +10,7 @@
 
 @layer base {
 	body {
-		@apply h-dvh bg-background-100 text-gray-1000 antialiased transition-colors duration-200;
+		@apply h-dvh overflow-y-scroll bg-background-100 text-gray-1000 antialiased transition-colors duration-200;
 	}
 
 	:root,
