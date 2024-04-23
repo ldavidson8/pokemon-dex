@@ -4,6 +4,7 @@
 	import 'iconify-icon';
 	import { settings } from '$lib/stores/settings';
 	import InlineSelect from './common/InlineSelect.svelte';
+	import NavLink from './NavLink.svelte';
 
 	$: if (browser) {
 		const theme = (() => {
@@ -23,7 +24,7 @@
 	}
 </script>
 
-<header class="container sticky top-2 mx-auto w-full rounded-xl px-8 py-2">
+<header class="container sticky top-0 mx-auto w-full px-8 py-2">
 	<div class="mx-auto flex items-center justify-between">
 		<div class="flex items-center p-3">
 			<a href="/">
@@ -32,15 +33,16 @@
 		</div>
 		<nav class="hidden w-full lg:flex">
 			<ul class="flex w-full items-center justify-evenly gap-x-4">
-				<li><a href="/search">Search</a></li>
-				<li><a href="/compare">Compare</a></li>
-				<li><a href="/pokemon">Pokémon</a></li>
-				<li><a href="/about">About</a></li>
+				<li><NavLink href="/search">Search</NavLink></li>
+				<li>
+					<NavLink href="/pokemon">Pokédex</NavLink>
+				</li>
+				<li><NavLink href="/types">Types</NavLink></li>
 			</ul>
 		</nav>
-		<div class="flex items-center p-3">
+		<div class="hidden items-center p-3 lg:flex">
 			<Dialog>
-				<iconify-icon icon="ph:info" width="24" slot="trigger" />
+				<iconify-icon icon="ph:gear" width="24" slot="trigger" />
 				<div slot="title">Settings</div>
 				<div slot="description">
 					<InlineSelect
