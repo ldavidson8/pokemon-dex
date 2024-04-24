@@ -6,10 +6,11 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:svelte/recommended',
-		'prettier'
+		'prettier',
+		'plugin:@tanstack/eslint-plugin-query/recommended'
 	],
 	ignorePatterns: ['*.cjs', 'svelte.config.js'],
-	plugins: ['@typescript-eslint'],
+	plugins: ['@typescript-eslint', '@tanstack/query'],
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
