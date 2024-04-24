@@ -14,6 +14,11 @@ export default {
 			},
 			transitionTimingFunction: {
 				ease: 'ease'
+			},
+			gridTemplateColumns: {
+				'auto-fill-100': 'repeat(auto-fill, minmax(100px, 1fr))',
+				'auto-fill-200': 'repeat(auto-fill, minmax(200px, 1fr))',
+				'auto-fit-100': 'repeat(auto-fit, minmax(100px, 1fr))'
 			}
 		},
 		container: {
@@ -140,7 +145,27 @@ export default {
 				'800': 'var(--gray-alpha-800)',
 				'900': 'var(--gray-alpha-900)',
 				'1000': 'var(--gray-alpha-1000)'
-			}
+			},
+			'pkmn-normal': 'var(--pkmn-normal)',
+			'pkmn-fire': 'var(--pkmn-fire)',
+			'pkmn-water': 'var(--pkmn-water)',
+			'pkmn-electric': 'var(--pkmn-electric)',
+			'pkmn-grass': 'var(--pkmn-grass)',
+			'pkmn-ice': 'var(--pkmn-ice)',
+			'pkmn-fighting': 'var(--pkmn-fighting)',
+			'pkmn-poison': 'var(--pkmn-poison)',
+			'pkmn-ground': 'var(--pkmn-ground)',
+			'pkmn-flying': 'var(--pkmn-flying)',
+			'pkmn-psychic': 'var(--pkmn-psychic)',
+			'pkmn-bug': 'var(--pkmn-bug)',
+			'pkmn-rock': 'var(--pkmn-rock)',
+			'pkmn-ghost': 'var(--pkmn-ghost)',
+			'pkmn-dragon': 'var(--pkmn-dragon)',
+			'pkmn-dark': 'var(--pkmn-dark)',
+			'pkmn-steel': 'var(--pkmn-steel)',
+			'pkmn-fairy': 'var(--pkmn-fairy)',
+			'pkmn-unknown': 'var(--pkmn-unknown)',
+			'pkmn-shadow': 'var(--pkmn-shadow)'
 		},
 		plugins: ['postcss-color-scheme/tailwind', 'tailwindcss-forms']
 	}
