@@ -16,9 +16,9 @@ export default {
 				ease: 'ease'
 			},
 			gridTemplateColumns: {
-				'auto-fill-100': 'repeat(auto-fill, minmax(100px, 1fr))',
-				'auto-fill-200': 'repeat(auto-fill, minmax(200px, 1fr))',
-				'auto-fit-100': 'repeat(auto-fit, minmax(100px, 1fr))'
+				'auto-fill-100': 'repeat(auto-fill, minmax(min(100px, 100%), 1fr))',
+				'auto-fill-200': 'repeat(auto-fill, minmax(min(200px, 100%), 1fr))',
+				'auto-fit-100': 'repeat(auto-fit, minmax(min(100px, 100%), 1fr))'
 			}
 		},
 		container: {
