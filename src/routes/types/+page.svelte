@@ -13,8 +13,8 @@
 	});
 </script>
 
-<Container
-	>{#if $query.isLoading}
+<Container>
+	{#if $query.isLoading}
 		<p>Loading...</p>
 	{/if}
 	{#if $query.error}
@@ -27,16 +27,18 @@
 				<a href="/types/{type.name}">
 					<div
 						class={cn(
-							'flex scale-90 items-center justify-between gap-4 rounded-full border border-gray-1000 bg-gray-800 bg-opacity-40 px-5 py-4 transition-transform duration-200 ease-in-out hover:scale-95',
+							'flex scale-90 items-center justify-between gap-4 rounded-full px-5 py-4 transition-transform duration-200 ease-in-out hover:scale-95',
 							cn(getTypeColor(type.name)),
 							!getTypeIcon(type.name) && 'justify-center'
 						)}
 					>
 						<p class="text-center text-xl font-medium capitalize text-white">{type.name}</p>
-						<svelte:component this={getTypeIcon(type.name)} class="size-8 text-white" />
+						<span class={cn('rounded-full px-2 py-2 text-white', getTypeColor(type.name))}>
+							<svelte:component this={getTypeIcon(type.name)} class="size-8 " />
+						</span>
 					</div>
 				</a>
 			{/each}
 		</div>
-	{/if}</Container
->
+	{/if}
+</Container>
