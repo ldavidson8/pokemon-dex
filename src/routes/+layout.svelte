@@ -2,15 +2,15 @@
 	import { browser, dev } from '$app/environment';
 	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 	import { SvelteQueryDevtools } from '@tanstack/svelte-query-devtools';
-
+	import { navigating } from '$app/stores';
 	import '@fontsource-variable/figtree';
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	import ScreenSize from '$lib/components/utils/ScreenSize.svelte';
+	import { ms } from 'itty-time';
 
 	import '../styles/nprogress.css';
 	import NProgress from 'nprogress';
-	import { navigating } from '$app/stores';
 
 	NProgress.configure({
 		minimum: 0.16
@@ -25,7 +25,9 @@
 	const queryClient = new QueryClient({
 		defaultOptions: {
 			queries: {
-				enabled: browser
+				enabled: browser,
+				refetchOnWindowFocus: false,
+				staleTime: ms('1 day')
 			}
 		}
 	});
