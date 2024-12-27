@@ -3,7 +3,7 @@
 	"singleQuote": true,
 	"trailingComma": "none",
 	"tabWidth": 2,
-	"printWidth": 100,
+	"printWidth": 120,
 	"svelteSortOrder": "options-scripts-markup-styles",
 	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
 	"tailwindFunctions": ["tv"],
