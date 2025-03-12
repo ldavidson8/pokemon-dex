@@ -14,7 +14,7 @@
 </script>
 
 <Container>
-	{#if $query.isLoading}
+	{#if $query.isPending}
 		<p>Loading...</p>
 	{/if}
 	{#if $query.error}
@@ -32,7 +32,7 @@
 							!getTypeIcon(type.name) && 'justify-center'
 						)}
 					>
-						<p class="text-center text-xl font-medium capitalize text-white">{type.name}</p>
+						<p class="text-center text-xl font-medium text-white capitalize">{type.name}</p>
 						<span class={cn('rounded-full px-2 py-2 text-white', getTypeColor(type.name))}>
 							<svelte:component this={getTypeIcon(type.name)} class="size-8 " />
 						</span>

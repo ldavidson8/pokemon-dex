@@ -13,7 +13,7 @@
 
 <a
 	class={cn(
-		'flex min-h-0 flex-col items-center justify-center gap-1 rounded-md border p-4 shadow-sm'
+		'flex min-h-0 flex-col items-center justify-center gap-1 rounded-md border p-4 shadow-xs'
 	)}
 	{href}
 >

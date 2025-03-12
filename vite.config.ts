@@ -1,9 +1,12 @@
+// <reference types="vitest/config" />
 import svg from '@poppanator/sveltekit-svg';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
 	plugins: [
+		tailwindcss(),
 		sveltekit(),
 		svg({
 			includePaths: ['./src/lib/icons/'],
@@ -20,9 +23,6 @@ export default defineConfig({
 			}
 		})
 	],
-	build: {
-		cssMinify: 'lightningcss'
-	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}

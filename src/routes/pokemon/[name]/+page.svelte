@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { createQuery } from '@tanstack/svelte-query';
 	import { getPokemonByName } from '$lib/api/getPokemonByName.query';
 
 	const query = createQuery({
 		queryKey: ['pokemon'],
-		queryFn: () => getPokemonByName($page.params.name)
+		queryFn: () => getPokemonByName(page.params.name)
 	});
 </script>
 
-{#if $query.isLoading}
+{#if $query.isPending}
 	<p>Loading...</p>
 {/if}
 {#if $query.error}

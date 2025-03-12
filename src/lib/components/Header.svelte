@@ -24,7 +24,7 @@
 	}
 </script>
 
-<header class="container sticky top-0 mx-auto w-full px-8 py-2">
+<header class="sticky top-0 container mx-auto w-full px-8 py-2">
 	<div class="mx-auto flex items-center justify-between">
 		<div class="flex items-center p-3">
 			<a href="/">
@@ -42,14 +42,10 @@
 		</nav>
 		<div class="hidden items-center p-3 lg:flex">
 			<Dialog>
-				<iconify-icon icon="ph:gear" width="24" slot="trigger" />
+				<iconify-icon icon="ph:gear" width="24" slot="trigger"></iconify-icon>
 				<div slot="title">Settings</div>
 				<div slot="description">
-					<InlineSelect
-						label="Theme"
-						bind:value={$settings.theme}
-						options={['System', 'Light', 'Dark']}
-					/>
+					<InlineSelect label="Theme" bind:value={$settings.theme} options={['System', 'Light', 'Dark']} />
 				</div>
 			</Dialog>
 		</div>

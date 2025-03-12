@@ -4,7 +4,7 @@
 </script>
 
 <Container>
-	<div class="grid grid-cols-auto-fill-200 gap-4 px-4">
+	<div class="auto-fill-200 grid gap-4 px-4">
 		<PokemonCard
 			id="25"
 			name="Pikachu"
