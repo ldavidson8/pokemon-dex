@@ -11,12 +11,7 @@
 	export let href: string;
 </script>
 
-<a
-	class={cn(
-		'flex min-h-0 flex-col items-center justify-center gap-1 rounded-md border p-4 shadow-xs'
-	)}
-	{href}
->
+<a class={cn('flex min-h-0 flex-col items-center justify-center gap-1 rounded-md border p-4 shadow-xs')} {href}>
 	<div class="flex h-24 w-24 items-center justify-center">
 		<img src={image} alt={name} class="object-cover" />
 	</div>

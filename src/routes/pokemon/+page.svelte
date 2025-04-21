@@ -4,7 +4,7 @@
 	import { POKEMON_LIMIT } from '$lib/constants';
 	import { getPokemonWithTypes } from '$lib/api/getPokemonWithTypes.query';
 
-	export const usePokemonList = createInfiniteQuery({
+	const usePokemonList = createInfiniteQuery({
 		queryKey: ['pokemonList'],
 		queryFn: ({ pageParam = 0 }) => getPokemonWithTypes({ page: pageParam }),
 		initialPageParam: 0,

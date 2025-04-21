@@ -1,7 +1,7 @@
-export function formatId(id: string) {
-	const trimmedId = id.trim();
-	if (trimmedId.length >= 4) {
-		return `${trimmedId}`;
+export function formatId(id: string | number) {
+	const idStr = id.toString().trim();
+	if (idStr.length >= 4) {
+		return idStr;
 	}
-	return `${trimmedId.padStart(3, '0')}`;
+	return idStr.padStart(3, '0');
 }
